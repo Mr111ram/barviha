@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel='stylesheet' href='/stylesheets/reset.css'/>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+<div class="layout"></div>
+<div class="background"></div>
+<div class="scroll_wrapper">
+    <div class="block">
+        <div class="logo"></div>
+        <div class="title">
+            <h1>Барвиха</h1>
+        </div>
+        <div class="roulette">
+            <button class="button" id="start">
+                <span>Начать Игру</span>
+            </button>
+        </div>
+        <div class="subtitle">
+            <div class="wrapper">
+                <div class="auth">
+                    <h2>Авторизация</h2>
+                    <p>Для авторизации выберите сервер и введите данные в поля ниже</p>
+                    <div class="field" id="select" data-select="0">
+                        <button class="item" data-active="0">Северная</button>
+                        <button class="item" data-active="0">Центральная</button>
+                        <button class="item" data-active="0">Южная</button>
+                        <button class="item" data-active="0">Восточная</button>
+                        <button class="item" data-active="0">Западная</button>
+                        <button class="item" data-active="0">Измайловская</button>
+                        <button class="item" data-active="1">Luxury</button>
+                        <button class="item" data-active="0">Яковлевская</button>
+                    </div>
+                    <input type="text" class="field" placeholder="Ник" id="nick">
+                    <input type="password" class="field" placeholder="Пароль" id="pass">
+                    <p class="error" id="error_nick">
+                        Поле ника не должно быть пустым!
+                    </p>
+                    <p class="error" id="error_pass">
+                        Поле пароль является обязательным для заполнения!
+                    </p>
+                    <p id="test" class="error">Неверный пароль!</p>
+                    <button type="text" class="field submit" id="login">Войти</button>
+                </div>
+                <div class="content">
+                    <p id="msg">
+                        Сейчас играют <br>
+                        в рулетку: <span class="count">360 человек</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="client">
+        <div class="wrapper">
+            <button class="button" id="auth">Личный кабинет</button>
+            <p class="say">Добро пожаловать <span>%nick%</span>!</p>
+            <div class="line"></div>
+        </div>
+    </div>
+    <div class="game">
+        <div class="wrapper">
+            <h3>Рулетка</h3>
+            <div class="wraper">
+                <div class="arrowup"></div>
+                <div class="arrowdown"></div>
+                <div class="window">
+                    <ul class="list">
+                        <li><span class="vv v0">10.000.000$</span></li>
+                        <li><span class="vv v1">Mercedes G65</span></li>
+                        <li><span class="vv v2">Квартира 2х комнатная</span></li>
+                        <li><span class="vv v3">2.000.000$</span></li>
+                        <li><span class="vv v4">Toyota Chaiser</span></li>
+                    </ul>
+                </div>
+            </div>
+            <p style="text-align: center">
+            <div class="win"><ul></ul></div>
+        </div>
+    </div>
+    <div class="modal">
+        <h1>Поздравляю <span class="surprise-nick"></span>, вы выйграли <span class="surprise"></span>!<br> В течение 72 часов придет приз!</h1>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="/javascripts/cookie.js"></script>
+<script src="/javascripts/script.js"></script>
+</body>
+</html>
